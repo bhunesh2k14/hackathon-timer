@@ -1,0 +1,58 @@
+@font-face {
+  font-family: custom;
+  src: url('fonts/custom.otf') format('opentype');
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: black;
+    font-family: Roboto; 
+    font-family: 'Bebas Neue', cursive;
+  }
+  
+  .container {
+    color: white;
+    text-align: center;
+  }
+  
+  h1 {
+    font-weight: normal;
+    font-family: custom;
+    font-size:4em;
+    padding:150px;
+    opacity:0.8;
+  }
+  
+  li {
+    display: inline-block;
+    font-size: 4em;
+    list-style-type: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-transform: uppercase;
+  }
+  
+  li span {
+    display: block;
+    font-size: 16rem;
+    
+  }
+
+  #minutes {
+    opacity:0.7;
+  }
+  #seconds {
+    opacity:0.3;
+  }
+  #controls {
+    color: white;
+    font-size:4em;
+  }
+
+  a {
+    text-decoration: none;
+  }

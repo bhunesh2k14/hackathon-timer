@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/90866a1161.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>HACKATHON</h1>
+        <ul>
+            <li><span id="hours"></span></li>&nbsp; 
+            <li><span id="minutes"></span></li>&nbsp; 
+            <li><span id="seconds"></span></li>
+        </ul>
+        
+        
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io('http://localhost/');
+        socket.on('time', function (data) {
+            if(data.hr==0 && data.min==0 && data.sec==0)
+            {
+                console.log(data);
+                
+            }
+            else
+            {
+                document.getElementById("hours").innerHTML = data.hr;
+                document.getElementById("minutes").innerHTML = data.min;
+                document.getElementById("seconds").innerHTML = data.sec;
+            }
+ 
+        });
+    </script>
+</body>
+
+</html>
